@@ -499,9 +499,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  26.80
-    #define DEFAULT_Ki  2.73
-    #define DEFAULT_Kd  65.66
+    #define DEFAULT_Kp  27.74
+    #define DEFAULT_Ki  2.35
+    #define DEFAULT_Kd  81.74
   #endif
 #endif // PIDTEMP
 
@@ -540,9 +540,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 152.96
-  #define DEFAULT_bedKi 26.53
-  #define DEFAULT_bedKd 587.99
+  #define DEFAULT_bedKp 222.60
+  #define DEFAULT_bedKi 39.43
+  #define DEFAULT_bedKd 837.87
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -739,9 +739,10 @@
 /**
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
+ *
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 6400, 1488 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 81.63, 79.80, 396.04, 99.44 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1234,8 +1235,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-// #define AUTO_BED_LEVELING_BILINEAR
-#define AUTO_BED_LEVELING_UBL
+#define AUTO_BED_LEVELING_BILINEAR
+// #define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
